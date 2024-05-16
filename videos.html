@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="video.css">
+</head>
+
+<body>
+
+ <header>
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="videos.html">VIDEOS</a></li>
+    </ul>
+</header>
+
+        <div class="container">
+
+        <h2> V I D E O S</h2>
+
+        <div class="video-container">
+            <div class="video"><video src="vid/dancing.mp4" muted></video></div>
+            <div class="video"><video src="vid/her.mp4" muted></video></div>
+            <div class="video"><video src="vid/them.mp4" muted></video></div>
+            </div>
+
+            <div class="popup-video">
+                <span>&times</span>
+                <video src="vid/dancing.mp4" muted autoplay controls></video>
+            </div>
+            </div>
+     
+
+            <script>
+                document.querySelectorAll('.video-container video').forEach(vid => {
+                    vid.onclick = () => {
+                        document.querySelector('.popup-video').style.display = 'block';
+                        document.querySelector('.popup-video video').src = vid.getAttribute('src');
+                    }
+                })
+                document.querySelector('.popup-video span').onclick = () =>{
+                    document.querySelector('.popup-video').style.display = 'none';
+                }
+            </script>
+
+    <footer>
+        COPYRIGHT 2024 @ GABY SANCHEZ ALL RIGHTS RESERVED | INSTAGRAM: 
+        <a href="https://www.instagram.com/savvyprobiz?igsh=MW9rdDUzcjQ3dWZ6Mg%3D%3D&utm_source=qr">SAVVYPROBIZ</a>
+        </footer>
+</body>
+</html>
+
+
+    

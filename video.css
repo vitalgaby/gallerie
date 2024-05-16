@@ -1,0 +1,135 @@
+* {
+    margin: 0 ; padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+ul {
+    font-family: arial;
+    font-size: 10PX;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(27, 27, 27, 0.9);
+}
+
+li {
+    float: left;
+    flex: 1;
+}
+
+li a {
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 4px 16px;
+    text-decoration: none;
+    background-color: rgba(27, 27, 27, 0.9);
+}
+
+li a:hover {
+    background-color: white;
+    color: black;
+    border: 2px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    background: black;
+}
+
+.container h2 {
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.container .video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container .video-container .video {
+    height: 250px;
+    width: 350px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px gray;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.container .video-container .video video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.container .video-container .video:hover video {
+    transform: scale(1.1);
+}
+
+.container .popup-video {
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 100;
+    background: black;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.container .popup-video video {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    border-radius: 5px;
+    border: 3px solid white;
+    object-fit: cover;
+}
+
+.container .popup-video span {
+    position: absolute;
+    top: 5px; right: 20px;
+    font-size: 50px;
+    color: white;
+    font-weight: bolder;
+    z-index: 100;
+    cursor: pointer;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(27, 27, 27, 0.9);
+}
+
+@media (max-width: 768px) {
+.container .popup-video video {
+    width: 95%;
+}
+}
